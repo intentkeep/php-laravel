@@ -8,9 +8,6 @@ class SubscriptionService
 
     public function activate(string $plan): string
     {
-        if ($plan === '') {
-            throw new \InvalidArgumentException('PLAN_REQUIRED');
-        }
         if ($plan !== 'pro') {
             throw new \InvalidArgumentException('INVALID_PLAN');
         }
